@@ -1,4 +1,17 @@
 ---
+server:
+  port: 9080
+---
+grails:
+    mongodb:
+        host: localhost
+        port: 27017
+        username: "grails"
+        password: "grails123"
+        databaseName: "carenet"
+
+---
+---
 grails:
     profile: rest-api
     codegen:
@@ -56,12 +69,3 @@ grails:
         defaultScope: singleton
     converters:
         encoding: UTF-8
-
----
-grails:
-    mongodb:
-        host: localhost
-        port: 27017
-        username: ""
-        password: ""
-        databaseName: "TrustBroker"

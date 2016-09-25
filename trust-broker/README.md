@@ -22,7 +22,7 @@ Provide `granular security` and `multitenancy` for your SaaS APIs.
 
 #### Setup
 
-1. Make sure [MongoDB](../MONGO.md) is running
+1. Make sure [MongoDB](../mongodb/) is running
 2. Start Trust Broker Grails App
 
 #### Run  
