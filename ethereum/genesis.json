@@ -1,0 +1,22 @@
+{
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "config": {
+    "homesteadBlock": 5
+  },
+  "difficulty": "0x20000",
+  "extraData": "Sumo Ethereum Genesis Block",
+  "gasLimit": "0x2FEFD8",
+  "mixhash": "0x00000000000000000000000000000000000000647572616c65787365646c6578",
+  "nonce": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "timestamp": "0x00",
+  "alloc": {
+    "016d499df5cea11bf9cffaff83d416d1041bf906":{
+      "balance":"10000000000000000000"
+
+    },
+    "e6272e43c6414ea4ceccb4311c3c7a65b0b57cce":{
+      "balance":"20000000000000000000"
+    }
+  }
+}
