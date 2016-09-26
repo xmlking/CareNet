@@ -26,7 +26,7 @@ Patients, Providers, Pharmacies and Payer's private blockchain network for payme
 
 
 ### TODO
-- [ ] Deploy [payments.sol](./mongodb/contracts/payments.sol)
+- [ ] Deploy [payments.sol](./ethereum/contracts/payments.sol)
 
 
 
