@@ -1,5 +1,6 @@
-Do it yourself - Trust Broker
-=============================
+DIY - Trust Broker
+==================
+Do-it-yourself guide to setup new Grails app.
 
 ### Create App
 ```
