@@ -6,7 +6,7 @@ Patients, Providers, Pharmacies and Payer's private blockchain network for payme
 
 ### Prerequisite
 1. Install Gradle 3.0 via [SDKMAN](http://sdkman.io/)
-2. Install Grails 3.2.0 RC1 via [SDKMAN](http://sdkman.io/)
+2. Install Grails 3.2.0 via [SDKMAN](http://sdkman.io/)
 3. Install node 6.6.0 via [NVM](https://github.com/creationix/nvm)
 
 ### Setup 
