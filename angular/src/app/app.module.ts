@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner/';
 import { HeaderComponent } from './shared/header/header.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 /* Feature Modules */
@@ -21,7 +20,6 @@ import { appRouting } from './app.routing';
     AppComponent,
     SpinnerComponent,
     HeaderComponent,
-    NavbarComponent,
     FooterComponent
   ],
   imports: [

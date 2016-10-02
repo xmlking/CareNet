@@ -7,7 +7,6 @@ export const appRoutes: Routes = [
 
   // PageNotFoundRoute should be last
   { path: '**', redirectTo: '404', pathMatch: 'full'},
-  // { path: '**', loadChildren: 'app/404/404.module#PageNotFoundModule' }
 ];
 
 export const appRouting = RouterModule.forRoot(appRoutes);

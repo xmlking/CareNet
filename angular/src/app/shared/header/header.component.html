@@ -1,5 +1,22 @@
-<nav app-navbar>
+<nav class='navbar navbar-fixed-top navbar-light bg-faded'>
   <!--[if lt IE 10]>
-  <p style="margin: 0;" class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+  <div class="container">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse">
+      &#9776;
+    </button>
+
+    <div class="collapse navbar-toggleable-xs">
+      <a class="navbar-brand" href="#">{{title}}</a>
+
+      <div class="nav navbar-nav">
+        <a class="nav-item nav-link" href="#" routerLink="home" routerLinkActive="active" i18n>Home</a>
+        <a class="nav-item nav-link" href="#" routerLink="dashboard" routerLinkActive="active" i18n>Dashboard</a>
+        <a class="nav-item nav-link pull-xs-right" href="#" routerLink="about" routerLinkActive="active" i18n>About</a>
+      </div>
+    </div>
+  </div>
+
 </nav>

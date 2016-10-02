@@ -8,7 +8,7 @@ Do-it-yourself guide to setup new Angular app.
 npm install -g typescript@next
 
 # npm install -g angular-cli
-npm install -g angular-cli@1.0.0-beta.15
+npm install -g angular-cli@1.0.0-beta.16
 
 # check
 npm list -g --depth=0
