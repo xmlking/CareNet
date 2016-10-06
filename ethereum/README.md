@@ -89,8 +89,6 @@ var greeter = greeterContract.new(_greeting,{from:web3.eth.accounts[0], data: gr
   
       }
   })
-
-# 
 ``` 
 
 #### Run the contract

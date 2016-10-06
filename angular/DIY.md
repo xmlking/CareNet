@@ -2,16 +2,24 @@ DIY for Angular
 ===============
 Do-it-yourself guide to setup new Angular app.
 
-### Setup
+### Install Prerequisites
 ```bash
 # install typescript
 npm install -g typescript@next
 
-# npm install -g angular-cli
+# npm install -g angular-cli@latest
 npm install -g angular-cli@1.0.0-beta.16
 
 # check
 npm list -g --depth=0
+```
+
+
+### Project Scaffolding
+```bash
+# create a new angular project `carenet`
+ng new carenet  --style=scss
+cd carenet
 ```
 
 ### Addons
@@ -26,16 +34,12 @@ npm list --depth=0
 npm outdated
 ```
 
-### Scaffolding 
+### Artifact Scaffolding
 ```bash
-# create a new angular project `carenet`
-ng new carenet  --style=scss
-
 # scaffold `home` module with `routes`
 ng g module home --routing   --dry-run
 
 ng g component shared/header --dry-run
-ng g component shared/navbar --dry-run
 ng g component shared/footer --dry-run
 
 # scaffold `dashboard` module and sub components
