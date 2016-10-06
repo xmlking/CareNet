@@ -63,7 +63,8 @@ contract Payer is mortal {
 	}
 
 	function payToProvider(address _providerAddress){
-		_providerAddress.send(services[_providerAddress].debt);
+		//_providerAddress.send(services[_providerAddress].debt);
+		if (!_providerAddress.send(services[_providerAddress].debt)) throw;
 
 	}
 
