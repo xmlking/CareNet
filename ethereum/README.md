@@ -13,12 +13,15 @@ brew install ethereum
 # need xcode 8
 brew install solidity
 brew linkapps solidity
-# test 
+# Verify installation
 geth version
 solc --version
 ```
 
-### Setup
+Download and install your platform specific **Ethereum Wallet** from:
+https://github.com/ethereum/mist/releases
+
+### Initial Setup
 ```bash
 cd ethereum
 
@@ -98,3 +101,6 @@ greeter.greet();
 ``` 
  
 
+### Ethereum Wallet
+After starting **geth** , you can open *Ethereum Wallet*. This will connect to your local private geth node.
+As an alternative to *CLI*, you can also use *Ethereum Wallet* to deploy **smart contracts** and execute them
