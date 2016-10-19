@@ -1,106 +1,108 @@
+pragma solidity ^0.4.2;
+
 contract mortal {
 
-	address public owner;
+  address public owner;
 
-	function mortal() {
+  function mortal() {
 
-		owner = msg.sender;
+    owner = msg.sender;
 
-	}
+  }
 
-	modifier onlyOwner{
-		if (msg.sender != owner) {
-			throw;
-		}else{
-			_
-		}
-	}
+  modifier onlyOwner{
+    if (msg.sender != owner) {
+      throw;
+    }else{
+      _;
+    }
+  }
 
-	function kill() onlyOwner {
+  function kill() onlyOwner {
 
-		suicide(owner);
-	}
+    suicide(owner);
+  }
 }
 
 
 contract Payer is mortal {
 
-	string public userName;
+  string public userName;
 
-	mapping(address=>Service) public services;
+  mapping(address=>Service) public services;
 
-	struct Service{
-		bool active;
-		uint lastUpdate;
-		uint256 debt;
-	}
+  struct Service{
+    bool active;
+    uint lastUpdate;
+    uint256 debt;
+  }
 
-	function Payer(string _name) {
+  function Payer(string _name) {
 
-		userName = _name;
-
-
-	}
-
-	function registerToProvider(address _providerAddress) onlyOwner {
-
-		services[_providerAddress] = Service({
-			active: true,
-			lastUpdate: now,
-			debt: 0
-			});
-
-	}
-
-	function setDebt(uint256 _debt){
-		if(services[msg.sender].active){
-			services[msg.sender].lastUpdate 	= now;
-			services[msg.sender].debt 			= _debt;
-
-			}else{
-				throw;
-			}
-	}
-
-	function payToProvider(address _providerAddress){
-		//_providerAddress.send(services[_providerAddress].debt);
-		if (!_providerAddress.send(services[_providerAddress].debt)) throw;
-
-	}
+    userName = _name;
 
 
-	function unsubscribe(address _providerAddress){
-		if(services[_providerAddress].debt == 0){
-			services[_providerAddress].active = false;
+  }
 
-			}else{
-				throw;
-			}
-	}
+  function registerToProvider(address _providerAddress) onlyOwner {
+
+    services[_providerAddress] = Service({
+      active: true,
+      lastUpdate: now,
+      debt: 0
+      });
+
+  }
+
+  function setDebt(uint256 _debt){
+    if(services[msg.sender].active){
+      services[msg.sender].lastUpdate   = now;
+      services[msg.sender].debt       = _debt;
+
+      }else{
+        throw;
+      }
+  }
+
+  function payToProvider(address _providerAddress){
+    //_providerAddress.send(services[_providerAddress].debt);
+    if (!_providerAddress.send(services[_providerAddress].debt)) throw;
+
+  }
+
+
+  function unsubscribe(address _providerAddress){
+    if(services[_providerAddress].debt == 0){
+      services[_providerAddress].active = false;
+
+      }else{
+        throw;
+      }
+  }
 
 
 }
 
 contract Provider is mortal {
 
-	string public providerName;
-	string public description;
+  string public providerName;
+  string public description;
 
-	function Provider(
-		string _name,
-		string _description){
+  function Provider(
+    string _name,
+    string _description){
 
-		providerName = _name;
-		description  = _description;
+    providerName = _name;
+    description  = _description;
 
-	}
+  }
 
-	function setDebt(uint256 _debt, address _userAddress) {
+  function setDebt(uint256 _debt, address _userAddress) {
 
-		Payer payer = Payer(_userAddress);
-		payer.setDebt(_debt);
+    Payer payer = Payer(_userAddress);
+    payer.setDebt(_debt);
 
-	}
+  }
 
 
 }
